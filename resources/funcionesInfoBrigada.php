@@ -49,8 +49,65 @@
         $eliminar= $con->query("delete from info_bri where ID_INFO='$idinfo';");
         return $eliminar;
     }
+    //CONSULTAS PARA REPORTES
     function consultarInfoBrigadaFechas($con,$fini,$ffin){
         $consultafechas= $con->query("SELECT *FROM info_bri WHERE FECH_INI_BRI>='$fini' AND FECH_FIN_BRI<='$ffin';");
         return $consultafechas;
     }
+    function consultaMedicas($con){
+        $consulta= $con->query("SELECT COUNT(*) AS TOTAL_MEDICAS FROM `info_bri` WHERE NOMBRE_BRI LIKE '%MÉDICA%';");
+        return $consulta;
+    }
+    function consultaCapacita($con){
+        $consulta= $con->query("SELECT COUNT(*) AS TOTAL_CAPACITA FROM `info_bri` WHERE NOMBRE_BRI LIKE '%CAPACITA%';");
+        return $consulta;
+    }
+    function consultaOdonto($con){
+        $consulta= $con->query("SELECT COUNT(*) AS TOTAL_ODONTO FROM `info_bri` WHERE NOMBRE_BRI LIKE '%ODONTO%';");
+        return $consulta;
+    }
+    function consultaOptome($con){
+        $consulta= $con->query("SELECT COUNT(*) AS TOTAL_OPTOME FROM `info_bri` WHERE NOMBRE_BRI LIKE '%OPTOME%';");
+        return $consulta;
+    }
+    function consultaCirugia($con){
+        $consulta= $con->query("SELECT COUNT(*) AS TOTAL_CIRUGIA FROM `info_bri` WHERE NOMBRE_BRI LIKE '%CIRUGIA%';");
+        return $consulta;
+    }
+    function consultaSuspendida($con){
+        $consulta= $con->query("SELECT COUNT(*) AS TOTAL_SUSPEN FROM `info_bri` WHERE NOMBRE_BRI LIKE '%SUSPEN%';");
+        return $consulta;
+    }
+    function consultaTotal($con){
+        $consulta= $con->query("SELECT COUNT(*) AS TOTAL FROM `info_bri`;");
+        return $consulta;
+    }
+    //consultas de provincias
+    function consultaProvincia($con){
+        $consulta= $con->query("SELECT PROVINCIA_BRI FROM `brigada` GROUP BY PROVINCIA_BRI;");
+        return $consulta;
+    }
+    //consulta info brigadas medicas
+    function consultaBrigadasMedicas($con){
+        $consulta= $con->query("SELECT * FROM `info_bri` WHERE NOMBRE_BRI LIKE '%MÉDICA%';");
+        return $consulta;
+    }
+    //consulta info brigadas optometria
+    function consultaBrigadasOptometria($con){
+        $consulta= $con->query("SELECT * FROM `info_bri` WHERE NOMBRE_BRI LIKE '%OPTOME%';");
+        return $consulta;
+    }
+    //consulta info brigadas odontologia
+    function consultaBrigadasOdontolo($con){
+        $consulta= $con->query("SELECT * FROM `info_bri` WHERE NOMBRE_BRI LIKE '%ODONTO%';");
+        return $consulta;
+    }
+    //consulta info brigadas cirugias
+    function consultaBrigadasCirugia($con){
+        $consulta= $con->query("SELECT * FROM `info_bri` WHERE NOMBRE_BRI LIKE '%CIRUG%';");
+        return $consulta;
+    }
+
+
+    
 ?>

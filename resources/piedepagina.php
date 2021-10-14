@@ -24,7 +24,7 @@
 			{
 			if (window.confirm("¿Desea eliminar toda la información de la brigada?") == true)
 				{
-					window.location = "http://localhost/brigadasmedicas/crudInfoBrigada/eliminarInfoBrigada.php?id_infobri="+infobri;
+					window.location = "http://localhost/brigadas/crudInfoBrigada/eliminarInfoBrigada.php?id_infobri="+infobri;
 				}
 			}
 		</script>

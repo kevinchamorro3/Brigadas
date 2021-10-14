@@ -17,17 +17,32 @@
 		<!--Menu-->
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-				<a class="navbar-brand" href="http://localhost/tiendaCelulares/admin.php"><!--<img src="http://localhost/brigadasmedicas/img/" alt="logo Brigadas Fundacion Nuevo Comienzo" width="90px" height="30px">--></a>
+				<a class="navbar-brand" href="http://localhost/brigadas/crudInfoBrigada/consultarInfoBrigada.php"><!--<img src="http://localhost/brigadasmedicas/img/" alt="logo Brigadas Fundacion Nuevo Comienzo" width="90px" height="30px">--></a>
 				<button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div id="my-nav" class="collapse navbar-collapse">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="http://localhost/brigadasmedicas/crudInfoBrigada/consultarInfoBrigada.php">Brigadas<span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="http://localhost/brigadas/crudInfoBrigada/consultarInfoBrigada.php">Brigadas<span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Consultas<span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="../consultas/reporteMedicas.php" target="_blank">Brigadas Médicas<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../consultas/reporteOptometras.php" target="_blank">Brigadas Optometras<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../consultas/reporteOdontologicas.php" target="_blank">Brigadas Odontológicas<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../consultas/reporteCirugias.php" target="_blank">Cirugías<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../consultas/reporteTotal.php" target="_blank">Reporte Total<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../consultas/reporteGeneral.php" target="_blank">Reporte General<span class="sr-only">(current)</span></a>
 						</li>
 					</ul>
 				</div>
