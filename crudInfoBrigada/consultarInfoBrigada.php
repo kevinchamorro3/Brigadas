@@ -190,7 +190,7 @@
 									<a href="../crudBrigada/consultarBrigada.php?id_infobri=<?php echo $fila['ID_INFO'];?>"><i style="color:#97F1FF" class="material-icons" title="Ver Informacion">visibility</i></a>
 									<a href="editarInfoBrigada.php?id_infobri=<?php echo $fila['ID_INFO'];?>"><i style="color:#ffc209" class="material-icons" title="Editar Brigada" >&#xE254;</i></a>
 									<a onclick="eliminarInfoBrigada(<?php echo $fila['ID_INFO'];?>);" href=""><i style="color:red" class="material-icons" title="Eliminar Brigada">&#xE872;</i></a>
-									<a href="#.php?id_infobri=<?php echo $fila['ID_INFO'];?>"><i style="color:#6C3483" class="material-icons" title="Imprimir Brigada">print</i></a>
+									<a href="../consultas/reporteUnitario.php?id_infobri=<?php echo $fila['ID_INFO'];?>" target="_blank"><i style="color:#6C3483" class="material-icons" title="Imprimir Brigada">print</i></a>
 								</td>
 							</tr>
 							<?php

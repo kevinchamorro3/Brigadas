@@ -17,7 +17,7 @@
 			{
 			if (window.confirm("¿Desea eliminar el registro?") == true)
 				{
-					window.location = "http://localhost/brigadasmedicas/crudBrigada/eliminarBrigada.php?id_bri="+idbri+"&id_infobri="+infobri;
+					window.location = "http://localhost/brigadas/crudBrigada/eliminarBrigada.php?id_bri="+idbri+"&id_infobri="+infobri;
 				}
 			}
 			function eliminarInfoBrigada(infobri)

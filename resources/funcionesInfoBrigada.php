@@ -49,7 +49,7 @@
         $eliminar= $con->query("delete from info_bri where ID_INFO='$idinfo';");
         return $eliminar;
     }
-    //CONSULTAS PARA REPORTES
+    ///////////////////////////////////////CONSULTAS PARA REPORTES//////////////////////////////
     function consultarInfoBrigadaFechas($con,$fini,$ffin){
         $consultafechas= $con->query("SELECT *FROM info_bri WHERE FECH_INI_BRI>='$fini' AND FECH_FIN_BRI<='$ffin';");
         return $consultafechas;
@@ -105,6 +105,73 @@
     //consulta info brigadas cirugias
     function consultaBrigadasCirugia($con){
         $consulta= $con->query("SELECT * FROM `info_bri` WHERE NOMBRE_BRI LIKE '%CIRUG%';");
+        return $consulta;
+    }
+    //consulta info brigadas capacitaciones
+    function consultaCapacitaciones($con){
+        $consulta= $con->query("SELECT * FROM `info_bri` WHERE NOMBRE_BRI LIKE '%CAPACI%';");
+        return $consulta;
+    }
+    ////////////consultas para total pacientes
+    function totalGeneral($con){
+        $consulta= $con->query("SELECT SUM(GENERAL) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalPedia($con){
+        $consulta= $con->query("SELECT SUM(PEDIATRIA) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalGineco($con){
+        $consulta= $con->query("SELECT SUM(GINECOLOGIA) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalOdonto($con){
+        $consulta= $con->query("SELECT SUM(ODONTOLOGIA) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalOptome($con){
+        $consulta= $con->query("SELECT SUM(OPTOMETRIA) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalDerma($con){
+        $consulta= $con->query("SELECT SUM(DERMATOLOGIA) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalCardio($con){
+        $consulta= $con->query("SELECT SUM(CARDIOLOGIA) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalTrauma($con){
+        $consulta= $con->query("SELECT SUM(TRAUMATOLOGIA) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalOftalmo($con){
+        $consulta= $con->query("SELECT SUM(OFTALMOLOGIA) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalPie($con){
+        $consulta= $con->query("SELECT SUM(PIE) AS valor FROM brigada;");
+        return $consulta;
+    }function totalMano($con){
+        $consulta= $con->query("SELECT SUM(MANO) AS valor FROM brigada;");
+        return $consulta;
+    }function totalLeporino($con){
+        $consulta= $con->query("SELECT SUM(LEPORINO) AS valor FROM brigada;");
+        return $consulta;
+    }function totalHendido($con){
+        $consulta= $con->query("SELECT SUM(HENDIDO) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalHbb($con){
+        $consulta= $con->query("SELECT SUM(HBB) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function totalPacientes($con){
+        $consulta= $con->query("SELECT SUM(TOTAL_PACIEN) AS valor FROM brigada;");
+        return $consulta;
+    }
+    function costototal($con){
+        $consulta=$con->query("SELECT SUM(`COSTO`) as COSTO FROM `info_bri`;");
         return $consulta;
     }
 

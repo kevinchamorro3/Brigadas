@@ -78,7 +78,6 @@
 						</div>
 						<div class="col-sm-8">
 							<a href="ingresarBrigada.php?id_infobri=<?php echo $id_infobri;?>" class="btn btn-success"><i class="material-icons">add_circle</i><span>Agregar información a la brigada</span></a>
-							<a href="#.php?id_infobri=<?php echo $id_infobri;?>" class="btn btn-warning"><i class="material-icons">print</i><span>Imprimir información de la brigada</span></a>
 							<a href="../crudInfoBrigada/consultarInfoBrigada.php" class="btn btn-info"><i class="material-icons">search</i><span>Consultar brigadas</span></a>
 						</div>
 	                </div>
@@ -142,7 +141,7 @@
 								<td class="text-center table-warning"><?php echo $fila2['HBB'];?></td>
 								<td nowrap>
 									<a href="editarBrigada.php?id_bri=<?php echo $fila2['ID_BRIGADA'];?>"><i style="color:#ffc209" class="material-icons" title="Editar" >&#xE254;</i></a>
-									<a href="" onclick="eliminarBrigada(<?php echo $fila2['ID_BRIGADA'];?>,<?php echo $fila2['ID_INFO'];?>);"><i style="color:red" class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></a>
+									<button onclick="eliminarBrigada(<?php echo $fila2['ID_BRIGADA'];?>,<?php echo $fila2['ID_INFO'];?>)"><i style="color:red" class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE872;</i></button>
 								</td>
 							</tr>
 							<?php

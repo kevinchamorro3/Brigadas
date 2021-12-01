@@ -37,10 +37,10 @@ if(isset($_POST['editarBrigada'])){
         header("location:../crudInfoBrigada/consultarInfoBrigada.php?pagina=1&actu=ok");
     }else{
         echo 'Falla aqui 1';
-        //header("location:../crudInfoBrigada/consultarInfoBrigada.php?pagina=1&actu=no");
+        header("location:../crudInfoBrigada/consultarInfoBrigada.php?pagina=1&actu=no");
     }
 }else{
     echo 'falla aqui 2';
-    //header("location:../crudInfoBrigada/consultarInfoBrigada.php?pagina=1&actu=no");
+    header("location:../crudInfoBrigada/consultarInfoBrigada.php?pagina=1&actu=no");
 }
 ?>
